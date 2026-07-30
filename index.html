@@ -161,43 +161,19 @@
             <p>Confira alguns relatos de quem já escolheu nossos serviços e recebeu atendimento de qualidade.</p>
           </div>
 
-          <div class="reviews-grid">
-            <article class="review-card reveal">
-              <div class="review-stars" aria-label="5 estrelas">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p>“Excelente atendimento, produtos de qualidade e equipe muito atenciosa. Resolveram tudo com rapidez e profissionalismo.”</p>
-              <div class="reviewer">— Ana M.</div>
-            </article>
+          <div class="reviews-shell reveal">
+            <button class="review-nav review-prev" type="button" aria-label="Ver comentário anterior">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
 
-            <article class="review-card reveal">
-              <div class="review-stars" aria-label="5 estrelas">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p>“Ótimo lugar para quem busca confiança, agilidade e soluções completas para escritório e empresa.”</p>
-              <div class="reviewer">— Carlos R.</div>
-            </article>
+            <div id="reviews-carousel" class="reviews-carousel" aria-live="polite"></div>
 
-            <article class="review-card reveal">
-              <div class="review-stars" aria-label="5 estrelas">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p>“Profissionalismo e atenção em cada detalhe. Sempre recebo um atendimento cordial e eficiente.”</p>
-              <div class="reviewer">— Marina T.</div>
-            </article>
+            <button class="review-nav review-next" type="button" aria-label="Ver próximo comentário">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
+
+          <p id="review-counter" class="review-counter" aria-live="polite"></p>
         </div>
       </section>
 
