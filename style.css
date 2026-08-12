@@ -10,6 +10,7 @@
   --light: #f5f7fb;
   --white: #ffffff;
   --border: #e5ecf8;
+  --stars: #ffd700;
   --shadow: 0 20px 45px rgba(15, 76, 129, 0.12);
 }
 
@@ -386,7 +387,7 @@ section {
 
 .review-card {
   display: none;
-  background: var(--white);
+  background: linear-gradient(135deg,var(--accent),#ff7b2C);
   border: 1px solid var(--border);
   border-radius: 22px;
   padding: 1.5rem;
@@ -398,7 +399,7 @@ section {
 }
 
 .review-stars {
-  color: var(--accent);
+  color: var(--stars);
   margin-bottom: 0.9rem;
   font-size: 1rem;
 }
@@ -409,7 +410,7 @@ section {
 }
 
 .review-card p {
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.82);
   margin-bottom: 0.8rem;
   font-weight: 500;
 }
@@ -463,12 +464,12 @@ section {
 ========================= */
 .timeline {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .timeline-step {
-  background: var(--white);
+  background: linear-gradient(135deg,var(--accent),#ff7b2C);
   border-radius: 22px;
   padding: 1.4rem;
   border: 1px solid var(--border);
@@ -482,14 +483,19 @@ section {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--primary);
   color: var(--white);
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
 
 .timeline-step h3 {
+  color: var(--white);
   margin-bottom: 0.45rem;
+}
+
+.timeline-step p {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* =========================
