@@ -78,14 +78,13 @@ section {
 }
 
 .btn-secondary {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: var(--white);
 }
 
 .eyebrow {
   display: inline-block;
-  color: var(--primary-2);
+  color: var(--white);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -226,7 +225,10 @@ section {
 ========================= */
 .hero {
   padding: 5rem 0 4.5rem;
-  background: linear-gradient(135deg, rgba(15, 76, 129, 0.06), rgba(255, 159, 67, 0.08));
+  background: linear-gradient(135deg, rgba(15, 76, 129, 0.8), rgba(255, 159, 67, 0.6)), url('imagens/fundo2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hero-grid {
@@ -239,13 +241,14 @@ section {
 .hero-content h1 {
   font-size: clamp(2rem, 4.2vw, 3.4rem);
   margin-bottom: 1rem;
-  color: var(--primary);
+  color: var(--white);
 }
 
 .hero-text {
   font-size: 1.05rem;
   max-width: 620px;
   margin-bottom: 1.4rem;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .hero-actions {
@@ -259,7 +262,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  color: var(--primary);
+  color: var(--white);
   font-weight: 600;
   list-style: none;
 }
@@ -272,7 +275,7 @@ section {
   background: var(--white);
   border-radius: 28px;
   box-shadow: var(--shadow);
-  padding: 1.2rem;
+  padding: 0.5rem;
   overflow: hidden;
 }
 
