@@ -43,6 +43,54 @@ window.addEventListener('scroll', setActiveLink);
 window.addEventListener('load', setActiveLink);
 
 /* =========================
+   Busca de produtos
+========================= */
+let products = [];
+
+const productsGrid = document.getElementById('products-grid');
+const productSearch = document.getElementById('product-search');
+const productCount = document.getElementById('product-count');
+const productsEmpty = document.getElementById('products-empty');
+
+const renderProducts = (searchTerm = '') => {
+  if (!productsGrid) return;
+
+  const normalizedTerm = searchTerm.trim().toLowerCase();
+  const filteredProducts = products.filter((product) =>
+    `${product.name} ${product.category}`.toLowerCase().includes(normalizedTerm)
+  );
+
+  productsGrid.innerHTML = filteredProducts.map((product) => `
+    <article class="product-card reveal visible" style="background-image: url(${product.image})">
+      <h3>${product.name}</h3>
+      <span class="product-price">${product.price}</span>
+    </article>
+  `).join('');
+
+  productCount.textContent = `${filteredProducts.length} ${filteredProducts.length === 1 ? 'produto encontrado' : 'produtos encontrados'}`;
+  productsEmpty.hidden = filteredProducts.length > 0;
+};
+
+productSearch?.addEventListener('input', (event) => renderProducts(event.target.value));
+
+const loadProducts = async () => {
+  try {
+    const response = await fetch('produtos.json');
+    if (!response.ok) throw new Error(`Falha ao carregar produtos: ${response.status}`);
+
+    products = await response.json();
+    renderProducts(productSearch?.value || '');
+  } catch (error) {
+    productsEmpty.hidden = false;
+    productsEmpty.textContent = 'Não foi possível carregar os produtos. Tente novamente mais tarde.';
+    productCount.textContent = 'Catálogo indisponível';
+    console.error(error);
+  }
+};
+
+loadProducts();
+
+/* =========================
    Animações ao rolar
 ========================= */
 const revealItems = document.querySelectorAll('.reveal');

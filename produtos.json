@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Papel sulfite A4",
+    "category": "Papelaria"
+  },
+  {
+    "name": "Cartucho de tinta",
+    "category": "Impressão",
+    "image": "imagens/cartucho.jpg",
+    "price": "R$100,00"
+  },
+  {
+    "name": "Toner para impressora",
+    "category": "Impressão",
+    "image": "imagens/toner.jpg",
+    "price": "R$90,00"
+  },
+  {
+    "name": "Pen drive Sandisk 64 GB",
+    "category": "Informática"
+  },
+  {
+    "name": "Teclado e mouse",
+    "category": "Informática"
+  },
+  {
+    "name": "Caderno universitário",
+    "category": "Papelaria"
+  },
+  {
+    "name": "Canetas esferográficas",
+    "category": "Papelaria"
+  },
+  {
+    "name": "Impressora multifuncional",
+    "category": "Equipamentos"
+  }
+]
